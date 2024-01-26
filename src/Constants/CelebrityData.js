@@ -1,8 +1,12 @@
+import AlanKay from  "../Assets/Images/AlanKay.jpeg";
 import apj from "../Assets/Images/apj.png";
 import billGates from "../Assets/Images/billGates.png";
 import einstein from "../Assets/Images/einstein.png";
+import LinusTorvalds from  "../Assets/Images/LinusTorvalds.jpeg";
+import MelindaGates from  "../Assets/Images/MelindaGates.jpeg";
 import nelsonMandela from "../Assets/Images/nelsonMandela.png";
-import steveJobs from "../Assets/Images/steveJobs.png";
+
+
 
 export const celebrities = [
     {
@@ -18,21 +22,34 @@ export const celebrities = [
         slideNumber: 2
     },
     {
-        title: "Albert Einstein",
-        description: "A person who never made a mistake never tried anything new.",
-        image: einstein,
-        slideNumber: 3
-    },
-    {
-        title: "Steve Jobs",
-        description: "We don't get a chance to do that many things, and every one should be really excellent.",
-        image: steveJobs,
-        slideNumber: 4
-    },
-    {
         title: "Bill Gates",
         description: "Success is a lousy teacher. It seduces smart people into thinking they can’t lose.",
         image: billGates,
+        slideNumber: 3
+    },
+    {
+        title: "Linus Torvalds",
+        description: "Any program is only as good as it is useful.",
+        image: LinusTorvalds,
+        slideNumber: 4
+    },
+    {
+        title: "Alan Kay",
+        description: "The best way to predict the future is to invent it.",
+        image: AlanKay,
         slideNumber: 5
     },
+    {
+        title: "Melinda Gates",
+        description: "Technology alone is not enough. We need to be the change we wish to see in the world.",
+        image: MelindaGates,
+        slideNumber: 6
+    },
+    {
+        title: "Albert Einstein",
+        description: "A person who never made a mistake never tried anything new.",
+        image: einstein,
+        slideNumber: 7
+    },
+
 ]
