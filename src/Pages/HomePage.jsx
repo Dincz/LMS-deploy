@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 import HomePageImage from "../Assets/Images/homePageMainImage.png";
 import HomeLayout from "../Layouts/HomeLayout";
@@ -8,12 +9,20 @@ function HomePage() {
         <HomeLayout>
             <div className="pt-10 text-white flex items-center justify-center gap-10 mx-16 h-[90vh]">
                 <div className="w-1/2 space-y-6">
-                    <h1 className="text-5xl font-semibold">
+                    <h1 className="text-4xl font-semibold">
                         Find out best
-                        <span className="text-yellow-500 font-bold">
-                            Online Courses
-                        </span>
+                        <span className="text-yellow-500  font-bold px-2 w-20">{'<'}
+                        <Typewriter
+                        words={['PRACTICAL', 'AFFORDABLE', 'PROFESSNAL']}
+                        loop={0}
+                        cursor
+                        cursorStyle='/'
+                        typeSpeed={120}
+                        deleteSpeed={80}
+                        />
+                        {'>'} </span>
                     </h1>
+                    <span className="text-2xl md:text-3xl lg:text-4xl font-semibold ">Online Courses</span>
                     <p className="text-xl text-gray-200">
                         We have a large library of courses taught by highly skilled and qualified faculties at a very affordable cost.
                     </p>
