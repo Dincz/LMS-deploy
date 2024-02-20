@@ -79,9 +79,11 @@ function Signup() {
                     </button>
 
                     <p className="text-center">
-                        Donot hanve an account ? <Link to="/signup" className='link text-accent cursor-pointer'> Signup</Link>
+                        Do not hanve an account ? <Link to="/signup" className='link text-accent cursor-pointer'> Signup</Link>
                     </p>
-
+                    <p className="text-center">
+                     <Link to="/Forgot-Pass" className='link text-accent cursor-pointer'> ForgotPass ?</Link>
+                    </p>
                 </form>
             </div>
         </HomeLayout>

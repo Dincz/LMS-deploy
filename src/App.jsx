@@ -20,7 +20,10 @@ import CheckoutFailure from './Pages/Payment/CheckoutFailure';
 import CheckoutSuccess from './Pages/Payment/CheckoutSuccess';
 import Signup from './Pages/Signup.jsx';
 import EditProfile from './Pages/User/EditProfile.jsx';
+import ForgetPass from './Pages/User/ForgotPass.jsx';
+import NewPass from './Pages/User/NewPass.jsx';
 import Profile from './Pages/User/Profile.jsx';
+import ResetPass from './Pages/User/ResetPass.jsx';
 function App() {
 
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/signup" element={<Signup />} ></Route>
         <Route path="/login" element={<Login />} ></Route>
         <Route path="/courses" element={<CourseList />} />
+        <Route path="/Reset-Pass" element={<ResetPass />} />
+        <Route path="/Forgot-Pass" element={<ForgetPass />} />
+        <Route path="/New-Pass/:token" element={<NewPass />} />
         <Route path="/course/description" element={<CourseDescription />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Denied" element={<Denied />} />

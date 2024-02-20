@@ -83,7 +83,38 @@ export const getUserData = createAsyncThunk("/user/details", async () => {
     }
 })
 
+export const resetPassword = createAsyncThunk("/user/reset", async(data) => {
+    try {
+        console.log("Data"+JSON.stringify(data));
+        let res = axiosInstance.post(`/user/reset-token/${data.token}`, { password: data.newPassword });
+        toast.promise(res,{
+            loading: "Reseting Your Password!",
+            success: (data)=>{
+                return data?.data?.message;
+            },
+            error: "Failed to Reset Password"
+        });
+        return (await res).data; 
+    } catch (error) {
+        toast.error(error?.response?.data?.message);
+    }
+} );
 
+export const forgotPassword = createAsyncThunk("/auth/forgotPassword", async(email) => {
+    try{
+        const res = axiosInstance.post("/user/reset", {email});
+        toast.promise(res,{
+            loading: "Loading...",
+            success:(data)=>{
+                return data?.data?.message;
+            },
+            error: "Failed to send verification email",
+        });
+        return (await res).data
+    }catch(error){
+        toast.error(error?.response?.data?.message);
+    }
+});
 
 const authSlice = createSlice({
     name: 'auth',
@@ -112,7 +143,8 @@ const authSlice = createSlice({
             state.isLoggedIn = true;
             state.data = action?.payload?.user;
             state.role = action?.payload?.user?.role
-        });
+        })
+        ;
     }
 });
 

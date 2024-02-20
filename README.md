@@ -72,9 +72,9 @@ os react-hot-toast @tailwindcss/line-clamp
 ```
 
 
-### Configure auto import sort esline
+### Configure auto import sort eslint
 
-1. Install simple import sore
+1. Install simple import sort
 
 ```
     npm i -D eslint-plugin-simple-import-sort
